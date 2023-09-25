@@ -1,16 +1,16 @@
 <template>
   <div>
-    <Swiper
+    <swiper
       :height="780"
-      :modules="[SwiperAutoplay, SwiperEffectCreative]"
-      :slides-per-view="1"
-      :loop="true"
-      :direction="'vertical'"
-      :effect="'creative'"
       class="swiper-slide"
+      :modules="[SwiperAutoplay, SwiperEffectCreative, Pagination]"
       :autoplay="{
         delay: 8000,
         disableOnInteraction: true,
+      }"
+      :direction="'vertical'"
+      :pagination="{
+        clickable: true,
       }"
     >
       <SwiperSlide
@@ -23,10 +23,11 @@
 
       <!-- useSwiper() within a swiper instance -->
       <SwiperControls />
-    </Swiper>
+    </swiper>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
+import { Pagination } from 'swiper/modules';
 const slides = ref(
   Array.from({ length: 10 }, () => {
     const r = Math.floor(Math.random() * 256);
