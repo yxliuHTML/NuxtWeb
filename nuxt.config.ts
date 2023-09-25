@@ -5,7 +5,11 @@ export default defineNuxtConfig({
   modules: [
     // ...
     '@pinia/nuxt',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@nuxtjs/tailwindcss',
+    ['nuxt-swiper', {
+      // Swiper options
+    }]
   ],
   css:['@/assets/css/default.scss']
 })

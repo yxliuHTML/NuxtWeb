@@ -1,7 +1,8 @@
 <template>
-  <header class="header">
+  <div>
+    <NuxtLayout name="header"></NuxtLayout>
     <slot />
-  </header>
+  </div>
 </template>
 <style scoped lang="scss">
 .header {
