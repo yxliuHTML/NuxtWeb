@@ -1,6 +1,49 @@
 /* 基本样式 */
-html,
-body,
-#__nuxt {
-  font-size: 14px !important;
+body {
+  margin: 0;
+  min-width: 1280px;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    min-width: auto;
+  }
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, SF Pro SC, SF Pro Text,
+    Helvetica Neue, Helvetica, PingFang SC, Segoe UI, Roboto, Hiragino Sans GB,
+    arial, microsoft yahei ui, Microsoft YaHei, SimSun, sans-serif;
+  font-weight: 400;
+}
+
+a {
+  outline: none !important;
+  text-decoration: none;
+}
+
+dd,
+dl,
+dt,
+h1,
+h2,
+h3,
+h4,
+ol,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
 }

@@ -4,5 +4,3 @@
     <HomeTitle></HomeTitle>
   </div>
 </template>
-
-<script setup></script>

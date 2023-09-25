@@ -1,23 +1,17 @@
 <template>
   <div>
-    <swiper
-      :height="780"
-      class="swiper-slide"
-      :modules="[SwiperAutoplay, SwiperEffectCreative, Pagination]"
+    <swiper class="swiper-slide" 
+      :modules="[SwiperAutoplay, SwiperEffectCreative, Pagination]" 
       :autoplay="{
         delay: 8000,
         disableOnInteraction: true,
-      }"
-      :direction="'vertical'"
+      }" 
+      :direction="'vertical'" 
       :pagination="{
         clickable: true,
-      }"
-    >
-      <SwiperSlide
-        v-for="(slide, idx) in slides"
-        :key="idx"
-        :style="`background-color: ${slide.bg}; color: ${slide.color}`"
-      >
+      }">
+      <SwiperSlide v-for="(slide, idx) in slides" :key="idx"
+        :style="`background-color: ${slide.bg}; color: ${slide.color}`">
         {{ idx }}
       </SwiperSlide>
 
@@ -51,7 +45,9 @@ const slides = ref(
   font-size: 4rem;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
 }
+
 .swiper-cards .swiper-slide {
   border-radius: 6px;
   border: 1px solid black;
